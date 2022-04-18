@@ -161,4 +161,4 @@ ggplot(a4, aes(x = m, y = parameter, color = parameter))+
   geom_linerange(aes(xmin = l, xmax = h), size=2)+
   geom_point(position = pos, color="black", size=3)+xlim(0, 1)+
   ylab("result") + xlab("probability") + 
-  ggtitle("Posterior probability credible intervals for team placed forth in group stage")
+  ggtitle("Posterior probability credible intervals for team placed fourth in group stage")
