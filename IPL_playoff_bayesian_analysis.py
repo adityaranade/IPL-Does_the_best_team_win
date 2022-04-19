@@ -11,7 +11,7 @@ print(df.head())
 ipl = df[df["Year"]>2010] #consider data from year 2011 upto 2021
 print(ipl.head())
 
-#separate the data for teams placed first upto forth in league stages
+#separate the data for teams placed first upto fourth in league stages
 ipl_pos1 = ipl[ipl["League_Position"].isin([1])]
 ipl_pos2 = ipl[ipl["League_Position"].isin([2])]
 ipl_pos3 = ipl[ipl["League_Position"].isin([3])]
@@ -67,7 +67,7 @@ fit_pos3 = pystan.stan(model_code = categorical_stan, data=dat_pos3, iter=10000,
 print(fit_pos3)  # highest probability of finishing third
 arviz.plot_trace(fit_pos3) # posterior density and traceplots
 
-# model for the posterior probabilities for team placed third at end of league stage
+# model for the posterior probabilities for team placed fourth at end of league stage
 dat_pos4 = {
     "N": len(ipl_pos4.index),
     "m": 4,
